@@ -53,7 +53,7 @@ export default function LoginPage() {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "X-CSRFToken": csrfToken,
+        "X-CSRFToken": csrfToken ?? "",
       },
       credentials: "include",
       body: JSON.stringify({username: username, password: password}),
