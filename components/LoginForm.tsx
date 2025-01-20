@@ -25,7 +25,7 @@ export default function LoginPage() {
   const Router = useRouter()
   const [username, setUserName] = useState('')
   const [password, setPassword] = useState('')
-  const [csrfToken, setscrf] = useState('')
+  const [csrfToken, setscrf] = useState<string | null>('')
   const [error, setError] = useState('');
   const [state, send] = useMachine(toggleMachine);
 
