@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
-export function middleware(request) {
+
+export function middleware(request:NextResponse) {
   const response = NextResponse.next();
   // Get CSRF token from cookie
   const csrfToken = request.cookies.get('csrftoken');
